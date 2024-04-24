@@ -56,8 +56,8 @@ private:
 
 	// コンストラクタは実体化したら最初に一度だけ動く
 	//TitleScene*      m_nowScene;
-	std::shared_ptr<TitleScene> m_nowScene;
-	std::shared_ptr<BaseScene> m_nowGameScene;
+	//std::shared_ptr<TitleScene> m_nowScene;
+	//std::shared_ptr<BaseScene> m_nowScene;
 
 
 

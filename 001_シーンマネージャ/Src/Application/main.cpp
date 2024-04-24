@@ -1,6 +1,7 @@
 ﻿#include "main.h"
 #include"Scene/TitleScene/TitleScene.h"
 #include"Scene/GameScene/GameScene.h"
+#include"Scene/SceneManager.h"
 
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
@@ -67,8 +68,12 @@ void Application::PreUpdate()
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
 void Application::Update()
 {
-	m_nowScene->Update();
-	m_nowGameScene->Update();
+	// ポリモーフィズム（多態性）
+	// 同じ関数名でオブジェクト毎に違う処理をすること
+	//if (GetAsyncKeyState(VK_RETURN) & 0x8000) m_nowScene = std::make_shared<GameScene>();
+	//if (GetAsyncKeyState('T') & 0x8000) m_nowScene = std::make_shared<TitleScene>();
+	//m_nowScene->Update();
+	SceneManager::GetInstance().Update();
 }
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
@@ -162,8 +167,8 @@ void Application::DrawSprite()
 	// 2Dの描画はこの間で行う
 	KdShaderManager::Instance().m_spriteShader.Begin();
 	{
-		m_nowScene->Draw();
-		m_nowGameScene->Draw();
+		//m_nowScene->Draw();
+		SceneManager::GetInstance().Draw();
 	}
 	KdShaderManager::Instance().m_spriteShader.End();
 }
@@ -229,8 +234,7 @@ bool Application::Init(int w, int h)
 	KdAudioManager::Instance().Init();
 
 	//m_nowScene = new TitleScene();
-	m_nowScene = std::make_shared<TitleScene>();
-	m_nowGameScene = std::make_shared<GameScene>();
+	//m_nowScene = std::make_shared<TitleScene>();
 
 
 	return true;
