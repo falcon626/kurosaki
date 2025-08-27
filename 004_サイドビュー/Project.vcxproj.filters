@@ -79,6 +79,15 @@
     <Filter Include="Src\Application\Object\Player">
       <UniqueIdentifier>{cdba5a43-c41c-4964-b1d9-26567420e7e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Back">
+      <UniqueIdentifier>{e546fea5-cafe-4401-8328-9fbb2ae98142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Enemy">
+      <UniqueIdentifier>{5c150802-9a13-4b94-9971-af4681332c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Ui">
+      <UniqueIdentifier>{8a413585-cb56-425a-a892-be0a6bb35a14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -252,6 +261,18 @@
     <ClInclude Include="Src\Application\Object\Player\player.h">
       <Filter>Src\Application\Object\Player</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Back\back.h">
+      <Filter>Src\Application\Object\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Stage\Fly.h">
+      <Filter>Src\Application\Object\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Enemy\Enemy.h">
+      <Filter>Src\Application\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Ui\Ui.h">
+      <Filter>Src\Application\Object\Ui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -397,6 +418,18 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Player\player.cpp">
       <Filter>Src\Application\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Back\back.cpp">
+      <Filter>Src\Application\Object\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Stage\Fly.cpp">
+      <Filter>Src\Application\Object\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Enemy\Enemy.cpp">
+      <Filter>Src\Application\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Ui\Ui.cpp">
+      <Filter>Src\Application\Object\Ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
